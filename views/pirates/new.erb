@@ -1,1 +1,29 @@
-<h1>Make your form here</h1>
+<h1>Make dinner reservation</h1>
+<%# one instance of the Pirate class, and two instances of the Ship class %>
+<form method = 'post' action = '/pirates'>
+    <h1 for="pirate">Pirate </h1>
+    <label for="pirate[name]"> name</label>
+    <input type="text" id="name" name="pirate[name]">
+    <label for="pirate[weight]"> weight</label>
+    <input type="text" id="weight" name="pirate[weight]">
+    <label for="pirate[height]"> height</label>
+    <input type="text" id="height" name="pirate[height]">
+    <br>
+    <h1 for="ships">Pirate ship 1 </h1>
+    <label > name</label>
+    <input id="ship_name_1" type="text"  name="pirate[ships][][name]">
+    <label > type</label>
+    <input id="ship_type_1" type="text"  name="pirate[ships][][type]">
+    <label > booty</label>
+    <input id="ship_booty_1" type="text" name="pirate[ships][][booty]">
+    <br>
+    <h1 for="ships">Pirate ship 2</h1>
+    <label > name</label>
+    <input id="ship_name_2" type="text"  name="pirate[ships][][name]">
+    <label > type</label>
+    <input id="ship_type_2" type="text"  name="pirate[ships][][type]">
+    <label > booty</label>
+    <input id="ship_booty_2" type="text" name="pirate[ships][][booty]">
+    <br>
+    <input id="Submit" type="submit" value="submit">
+</form>
