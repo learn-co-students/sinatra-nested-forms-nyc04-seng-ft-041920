@@ -16,12 +16,12 @@ module FormsLab
 
     post '/pirates' do
       # binding.pry
-      # @pirate = Pirate.new(name: params[:pirate][:name], weight: params[:pirate][:weight], height: params[:pirate][:height])
-      @pirate = Pirate.new(params[:pirate])
+      @pirate = Pirate.new(params[:pirate][:name], params[:pirate][:weight], params[:pirate][:height])
+      # @pirate = Pirate.new(params[:pirate])
 
       params[:pirate][:ships].each do |ship_details|
-        # Ship.new(name: ship_details[:name], type: ship_details[:type], booty: ship_details[:booty])
-        Ship.new(ship_details)
+        Ship.new(ship_details[:name], ship_details[:type], ship_details[:booty])
+        # Ship.new(ship_details)
       end
 
       @ships = Ship.all
