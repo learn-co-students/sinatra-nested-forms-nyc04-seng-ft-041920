@@ -2,10 +2,10 @@ class Ship
     attr_accessor :name, :type, :booty
     @@all = []
 
-    def initialize(name, type, booty)
-        @name = name
-        @type = type
-        @booty = booty
+    def initialize(given)
+        @name = given[:name]
+        @type = given[:type]
+        @booty = given[:booty]
         @@all << self
     end
 
@@ -14,6 +14,6 @@ class Ship
     end
 
     def self.clear
-        @@all = []
+        @@all = Array.new
     end
 end
